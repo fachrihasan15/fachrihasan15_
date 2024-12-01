@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 25px 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1.5s linear forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes show-content {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-left: 35px;
+}
+
+.navbar ul li a {
+  font-size: 20px;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.navbar ul li:hover a {
+  color: #7cf03d;
+}
+
+/* Home Section Styling */
+.home {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 60px 9% 0;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1.5s linear forwards;
+  animation-delay: 1.6s;
+}
+
+.home-info h1 {
+  font-size: 55px;
+}
+
+.home-info h2 {
+  font-size: 32px;
+  margin-top: -10px;
+}
+
+.home-info p {
+  font-size: 16px;
+  margin: 10px 0 25px;
+}
+
+.home-info .btn-sci {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #7cf03d;
+  border: 2px solid #7cf03d;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #7cf03d;
+  font-size: 16px;
+  color: #1f242d;
+  font-weight: 600;
+  transition: .5s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #7cf03d;
+  box-shadow: none;
+}
+
+.home-info .btn-sci .sci {
+  margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid #7cf03d;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #7cf03d;
+  margin: 0 8px;
+  transition: .5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+  background: #7cf03d;
+  color: #1f242d;
+  box-shadow: 0 0 10px #7cf03d;
+}
+
+/* Image Styling */
+.home-img .img-box {
+  position: relative;
+  width: 32vw;
+  height: 32vw;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-img .img-box .img-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #1f242d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+  position: absolute;
+  top: 30px;
+  display: block;
+  width: 85%;
+  object-fit: cover;
+  mix-blend-mode: lighten;
+}
+
+/* Bars Animation */
+.bars-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: -1;
+}
+
+.bars-animation .bar {
+  width: 100%;
+  height: 100%;
+  background: #1f242d;
+  transform: translateY(-100%);
+  animation: show-bars .5s ease-in-out forwards;
+  animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars {
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* Sertifikat Section Styling */
+.sertifikat {
+  padding: 220px 9%;
+  background: #000;
+  text-align: center;
+}
+
+.sertifikat h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.sertifikat-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sertifikat-item {
+  width: 400px;
+  text-align: center;
+  background: #bfd8d1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sertifikat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sertifikat-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sertifikat-item p {
+  padding: 5px;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Project Section Styling */
+.project {
+  padding: 100px 9%;
+  background: #000;
+  text-align: center;
+}
+
+.project h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-item {
+  width: 400px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  margin: 50px 0;
+  color: #333;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.project-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7cf03d;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.project-item a:hover {
+  background: transparent;
+  color: #7cf03d;
+  border: 2px solid #7cf03d;
+  box-shadow: none;
+}
+
+/* Contact Section Styling */
+.contact {
+  background-color: #000;
+  padding: 400px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #d2c8c8;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-form .form-group label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 5px solid #ddd; /* Corrected border size */
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form .form-group input[type="tel"] {
+  font-size: 1rem; /* Make sure all inputs have the same font size */
+}
+
+.contact-form .form-group textarea {
+  min-height: 150px; /* Set a minimum height for textarea */
+  resize: vertical; /* Allows resizing of textarea vertically */
+}
+
